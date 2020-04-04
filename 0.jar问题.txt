@@ -1,0 +1,25 @@
+1.高版本springboot会发生缺少jar    目前使用 1.5.21 没问题
+2.zkclient.jar 中 需要排除slf4j-log4j12.jar  不然会与 log4j.jar冲突
+
+所需jar
+<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.0</version>
+</dependency>
+<dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+</dependency>
+<dependency>
+            <groupId>com.gitee.reger</groupId>
+            <artifactId>spring-boot-starter-dubbo</artifactId>
+            <version>1.0.10</version>
+</dependency>
