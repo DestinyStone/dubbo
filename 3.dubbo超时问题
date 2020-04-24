@@ -1,0 +1,2 @@
+dubbo.consumer.timeout=6000    //设置消费的超时时间
+dubbo.consumer.retries=10    //设置重试次数
